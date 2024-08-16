@@ -25,7 +25,7 @@ const Pagination = () => {
       <Button isDisabled={isLoading || page <= 1} onClick={() => setPage(page - 1)}>
         Previous
       </Button>
-      <Input onKeyDown={e => e.key === 'Enter'} name="limit" type="number" onChange={handleLimitChange} isDisabled={isLoading} label="Job per page" value={inputLimitValue} />
+      <Input name="limit" type="number" onChange={handleLimitChange} isDisabled={isLoading} label="Job per page" value={inputLimitValue} />
       <Button isDisabled={isLoading || page * limit >= total} onClick={() => setPage(page + 1)}>
         Next
       </Button>

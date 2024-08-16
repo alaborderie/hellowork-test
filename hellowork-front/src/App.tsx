@@ -21,7 +21,15 @@ function App() {
       <h1 className="text-5xl mb-16">Hello work!</h1>
       <div className="flex justify-between items-center gap-8 mb-8">
         <h2>A job is waiting for you! Whate are you looking for?</h2>
-        <Input className="mr-6" name="jobTitle" onChange={e => setJobSearch(e.target.value)} isDisabled={isLoading} label="Job Title" value={jobSearch} />
+        <Input
+          onKeyDown={e => e.key === 'Enter' && handleSearch()}
+          className="mr-6"
+          name="jobTitle"
+          onChange={e => setJobSearch(e.target.value)}
+          isDisabled={isLoading}
+          label="Job Title"
+          value={jobSearch}
+        />
         <Button isDisabled={isLoading} onClick={handleSearch}>
           Search
         </Button>
