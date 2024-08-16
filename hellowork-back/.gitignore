@@ -170,3 +170,7 @@ dist
 
 # IntelliJ based IDEs
 .idea
+
+# front-end build output
+static/*
+!static/.gitkeep
