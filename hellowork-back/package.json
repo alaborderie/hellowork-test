@@ -1,0 +1,35 @@
+{
+  "name": "hellowork-back",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun src/index.ts",
+    "lint": "eslint src --report-unused-disable-directives --max-warnings 0",
+    "prettier": "prettier --config .prettierrc.cjs 'src/**/*.{js,cjs,ts}' --write",
+    "preview": "vite preview",
+    "check:type": "tsc --noEmit",
+    "check:lint": "eslint -c eslint.config.mjs src --cache",
+    "check:lint:fix": "eslint -c eslint.config.mjs src --fix --cache",
+    "check:all": "bun run check:type && bun run check:lint && bun test"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.0",
+    "@types/koa": "^2.15.0",
+    "@types/koa-router": "^7.4.8",
+    "bun-types": "latest",
+    "eslint": "^9.9.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.1.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "koa": "^2.15.3",
+    "koa-router": "^12.0.1",
+    "node-fetch": "^3.3.2"
+  }
+}
+
